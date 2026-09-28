@@ -1,7 +1,7 @@
 // # koffie per jaar
-import * as readline from 'node:readline/promises';
-import{stdin as input, stdout as output} from 'node:process';
-const userInput = readline.createInterface({input, output});
+import * as readline from "node:readline/promises";
+import { stdin as input, stdout as output } from "node:process";
+const userInput = readline.createInterface({ input, output });
 
 // let quantiteit = parseFloat(await userInput.question('Hoeveel koppen koffie gemiddeld per dag? '));
 
@@ -29,15 +29,16 @@ const userInput = readline.createInterface({input, output});
 // import{stdin as input, stdout as output} from 'node:process';
 // const userInput = readline.createInterface({input, output});
 
+let getal = parseFloat(await userInput.question("Wat is je eerste getal? "));
+getal =
+  getal + parseFloat(await userInput.question("Wait is je tweede getal? "));
+getal =
+  getal + parseFloat(await userInput.question("Wait is je derde getal? "));
+getal =
+  getal + parseFloat(await userInput.question("Wait is je vierde getal? "));
 
-
-let getal =parseFloat(await userInput.question('Wat is je eerste getal? '));
-getal = getal + parseFloat(await userInput.question('Wait is je tweede getal? '));
-getal = getal + parseFloat(await userInput.question('Wait is je derde getal? '));
-getal = getal + parseFloat(await userInput.question('Wait is je vierde getal? '));
-
-getal = getal/4
+getal = getal / 4;
 
 console.log(getal);
 
-process.exit()
+process.exit();
