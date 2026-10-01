@@ -1,0 +1,3 @@
+Module om gewoon te beseffen dat je logisch moet programmeren
+want computers zijn dom, en je moet je idee kunnen opdelen in
+deelideeen
