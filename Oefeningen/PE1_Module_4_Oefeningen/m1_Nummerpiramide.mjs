@@ -2,14 +2,15 @@ import * as readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 const userInput = readline.createInterface({ input, output });
 
-let number = parseFloat(await userInput.question("Hoeveel loops?: "));
+let hoogte = parseFloat(await userInput.question("Hoogste getal: "));
 
-let i = 1;
-do {
-  console.log(i);
-  for(let display = ""; i <= number; i++){
-    display = i + display
+for (let i = 1; i <= hoogte; i++) {
+  let rij = "";
+
+  for (let j = 1; j <= i; j++) {
+    rij += i;
   }
-} while (i <= number);
 
+  console.log(rij);
+}
 process.exit();
