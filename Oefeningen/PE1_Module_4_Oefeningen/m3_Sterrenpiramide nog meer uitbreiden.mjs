@@ -3,14 +3,19 @@ let startLeft = false;
 let height = 3;
 
 if (startTop) {
-  let rij = "*";
   let i = 1;
   if (startLeft) {
     while (i <= height) {
+      let rij = "";
+      let j = 1;
+      while (j <= i) {
+        rij += i;
+        j++;
+      }
       console.log(rij);
-      rij += "*";
       i++;
     }
+  
   } else {
     while (i <= height) {
       let spatieRuimte = height - i;
@@ -22,7 +27,7 @@ if (startTop) {
       }
       let s = 1;
       while (s <= i) {
-        rij += "*";
+        rij += i;
         s++;
       }
 
@@ -37,7 +42,7 @@ if (startTop) {
       let rij = "";
       let j = 1;
       while (j <= i) {
-        rij += "*";
+        rij += i;
         j++;
       }
       console.log(rij);
@@ -54,24 +59,12 @@ if (startTop) {
       }
       let s = 1;
       while (s <= i) {
-        rij += "*";
+        rij += i;
         s++;
       }
       console.log(rij);
       i--;
     }
   }
-}
-process.exit();
-
-
-for (let i = 1; i <= height; i++) {
-  let rij = "";
-
-  for (let j = 1; j <= i; j++) {
-    rij += i;
-  }
-
-  console.log(rij);
 }
 process.exit();
