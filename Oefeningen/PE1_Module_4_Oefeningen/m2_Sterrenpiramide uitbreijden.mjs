@@ -1,20 +1,65 @@
 let startTop = true;
-let startLeft = true;
+let startLeft = false;
 let height = 3;
-let rij = "";
-let linksSpatie = "";
 
-if (startTop && startLeft) {
-  for (let i = 1; i <= height; i++) {
-    rij += "*";
-    console.log(rij);
+if (startTop) {
+  let rij = "*";
+  let i = 1;
+  if (startLeft) {
+    while (i <= height) {
+      console.log(rij);
+      rij += "*";
+      i++;
+    }
+  } else {
+    while (i <= height) {
+      let spatieRuimte = height - i;
+      let rij = "";
+      let j = 1;
+      while (j <= spatieRuimte) {
+        rij += " ";
+        j++;
+      }
+      let s = 1;
+      while (s <= i) {
+        rij += "*";
+        s++;
+      }
+
+      console.log(rij);
+      i++;
+    }
   }
-} else if (startTop && !startLeft) {
-  for (let i = 3; i >= 0; i--) {
-    
+} else {
+  let i = height;
+  if (startLeft) {
+    while (i >= 1) {
+      let rij = "";
+      let j = 1;
+      while (j <= i) {
+        rij += "*";
+        j++;
+      }
+      console.log(rij);
+      i--;
+    }
+  } else {
+    while (i >= 1) {
+      let spatieRuimte = height - i;
+      let rij = "";
+      let j = 1;
+      while (j <= spatieRuimte) {
+        rij += " ";
+        j++;
+      }
+      let s = 1;
+      while (s <= i) {
+        rij += "*";
+        s++;
+      }
+      console.log(rij);
+      i--;
+    }
   }
-} else if (!startTop && startLeft) {
-
-} else if (!startTop && !startLeft) {
-
 }
+process.exit();
