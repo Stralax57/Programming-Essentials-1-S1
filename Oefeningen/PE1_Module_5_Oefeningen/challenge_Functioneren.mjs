@@ -1,0 +1,1 @@
+// probeer alles in een functie te zetten, zorgt dat de globale omgeving niet besmet wordt met onnodige variabele

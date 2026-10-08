@@ -1,0 +1,1 @@
+//gebruik Math. functions die ingebouwd zijn
