@@ -1,0 +1,3 @@
+iets OVERSCHRIJVEN! op een index: array[idx] = <el>
+iets toevoegen aan het einde van de array: array.push(<el>) (append)
+laatste element van de array opvragen en verwijderen: array.pop()
