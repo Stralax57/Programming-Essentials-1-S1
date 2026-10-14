@@ -1,0 +1,67 @@
+objecten zijn datastructuren - gebruikt om gegevens die bij elkaar horen structuur te geven.
+objecten bestaan uit verschillende key/value pairs (dictionary ADT)
+key: eigenschap
+value: werkelijke waarde (any)
+let persoon = {
+    naam: "Joske",
+    leeftijd: 21,
+    lievelingsFruit: "Banaan"
+};
+
+arrays en objecten zijn datastructuren,
+arrays: info toegankelijk via index
+objecten: || || via key
+ipv bracket notation ( objectNaam['keyNaam'] ) kunnen we ook
+dot notation ( objectNaam.keyNaam )
+
+arrays vs objecten gebruiken:
+arrays bij een verzameling van vergelijkbare items
+objecten bij geassocieerde gegevens met specifieke sleutels
+
+andere values om in objecten te steken:
+- nesten van objecten 
+(zoals boeken; 
+titel: ___
+autreur: {
+    voornaame:
+    achternaam:
+})
+- functies; 
+wordt vaak gebruikt om gedrag of methoden aan een object toe te voegen.
+let rekenmachine = {
+    voegToe: function(a, b) {
+        return a + b;
+    },
+    vermenigvuldig: function(a, b) {
+      return a * b;
+    }
+};
+
+let som = rekenmachine.voegToe(2, 2);
+- nieuwe waarden aanmaken:
+boek.isbn = "0-330-254864-8"
+
+dit module is heel belangerijk voor volgend semester: OOP.
+
+this keyword: verwijst nnaar het huidide object. toegang krijgen tot eigenschappen en methoden van het obj
+
+let persoon1 = {
+    naam: 'Jos',
+    begroet: function() {
+        console.log(`Hallo, ik ben ${this.naam}.`);
+    }
+};
+
+let persoon2 = {
+    naam: 'Jef',
+    begroet: function() {
+        console.log(`Hallo, ik ben ${this.naam}.`);
+    }
+};
+            
+persoon1.begroet();
+persoon2.begroet();
+
+anders zou de console.log een error terug geven.
+
+
